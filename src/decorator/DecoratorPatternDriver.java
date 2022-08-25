@@ -4,12 +4,13 @@ package decorator;
 public class DecoratorPatternDriver {
 
     public static void main(String[] args) {
-        // christmas tree with just one Garland
+        ChristmasTree tree = new ChristmasTreeImpl();
 
-
-        // christmas tree with two Garlands and one Bubble lights
-
-
+        tree = new Garland(tree);
+        System.out.println(tree.decorate());
+        tree = new BubbleLights(tree);
+        System.out.println(tree.decorate());
+        tree = new Garland(tree);
+        System.out.println(tree.decorate());
     }
-
 }
