@@ -11,4 +11,9 @@ public class ElementVisitor implements Visitor {
     public void visit(JsonElement je) {
         System.out.println("processing json element with uuid: " + je.uuid);
     }
+
+    @Override
+    public void visit(HtmlElement he) {
+        System.out.println("processing html element with uuid: " + he.uuid);
+    }
 }

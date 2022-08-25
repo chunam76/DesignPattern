@@ -12,6 +12,7 @@ public class VisitorDemo {
         d.elements.add(new JsonElement(generateUuid()));
         d.elements.add(new JsonElement(generateUuid()));
         d.elements.add(new XmlElement(generateUuid()));
+        d.elements.add(new HtmlElement(generateUuid()));
 
         d.accept(v);
     }
