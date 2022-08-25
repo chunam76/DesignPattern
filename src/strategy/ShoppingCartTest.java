@@ -10,9 +10,15 @@ public class ShoppingCartTest {
 		
 		cart.addItem(item1);
 		cart.addItem(item2);
-		
-		//pay by credit card
-		cart.pay("Jongdae Han", "1234567890123456", "786", "12/15");
+
+		cart.setPayment(new CreditCardPayment("Jongdae Han", "1234567890123456", "786", "12/15"));
+		cart.pay(20000);
+
+		cart.setPayment(new KakaoPayPayment("joim", "1q2w3e4r5t"));
+		cart.pay(20000);
+
+		cart.setPayment(new CashPayment());
+		cart.pay(10000);
 	}
 
 }

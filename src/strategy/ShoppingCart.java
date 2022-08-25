@@ -10,6 +10,8 @@ public class ShoppingCart {
 
 	//List of items
 	List<Item> items;
+
+	Payment payment;
 	
 	public ShoppingCart(){
 		this.items=new ArrayList<Item>();
@@ -30,9 +32,12 @@ public class ShoppingCart {
 		}
 		return sum;
 	}
-	
-	public void pay(String name, String ccNum, String cvv, String expiryDate){
-		int amount = calculateTotal();
-		System.out.println(amount +" paid with credit/debit card");
+
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+
+	public void pay(int amount){
+		this.payment.pay(amount);
 	}
 }
