@@ -1,6 +1,7 @@
 package command.receiver;
 
 public class TextFile {
+    // 실제 작업을 하는 객체
     
     private final String name;
     
